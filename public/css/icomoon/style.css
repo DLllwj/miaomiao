@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?pvlrxd');
+  src:  url('fonts/icomoon.eot?pvlrxd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?pvlrxd') format('truetype'),
+    url('fonts/icomoon.woff?pvlrxd') format('woff'),
+    url('fonts/icomoon.svg?pvlrxd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-computer-desktop:before {
+  content: "\e903";
+}
+.icon-shopping-cart:before {
+  content: "\e902";
+}
+.icon-camera1:before {
+  content: "\e900";
+}
+.icon-lock:before {
+  content: "\e901";
+}
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-spoon-knife:before {
+  content: "\e9a3";
+}
+.icon-briefcase:before {
+  content: "\e9ae";
+}
+.icon-man:before {
+  content: "\e9dc";
+}
+.icon-woman:before {
+  content: "\e9dd";
+}
