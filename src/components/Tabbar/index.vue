@@ -29,21 +29,23 @@ export default {
 }
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: -5px;
   left: 0px;
+  background-color: white;
   width: 100%;
   height: 50px;
-  background: white;
   border-top: 2px solid #ebe8e3;
   ul {
     display: flex;
+    text-align: center;
+    align-items: center;
     li {
-      text-align: center;
       flex: 1;
       height: 40px;
       margin: 5px 0;
       p {
         font-size: 12px;
+        font-weight: 400;
       }
       i {
         font-size: 20px;
