@@ -1,11 +1,15 @@
 <template>
   <div>
     <Header title="喵喵影院" />
-    <ul>
-      <router-link to="" tag="li" active-class="CinemaActive">全城</router-link>
-      <router-link to="" tag="li" active-class="CinemaActive">品牌</router-link>
-      <router-link to="" tag="li" active-class="CinemaActive">特色</router-link>
-    </ul>
+    <div>
+      <ul>
+        <router-link to="" tag="li" active-class="CinemaActive">全城</router-link>
+        <router-link to="" tag="li" active-class="CinemaActive">品牌</router-link>
+        <router-link to="" tag="li" active-class="CinemaActive">特色</router-link>
+      </ul>
+      <CiList />
+
+    </div>
     <Tabbar />
   </div>
 </template>
@@ -13,12 +17,15 @@
 <script>
 import Header from "@/components/Header"
 import Tabbar from "@/components/Tabbar"
+import CiList from "@/components/CiList"
 export default {
   name: "Cinema",
   components: {
     Header,
-    Tabbar
-  }
+    Tabbar,
+    CiList
+  },
+
 }
 </script>
 
