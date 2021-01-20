@@ -2,18 +2,18 @@
   <div ref="movie_body">
     <Loading v-if="isLoading" />
     <!-- <Scroll :handleToScroll="ToScroll" :handleToTouchEnd="ToTouchEnd"> -->
-    <Scroll>
-      <ul>
-        <!-- <li class="pullDown">{{pullDownMsg}}</li> -->
-        <li v-for="data in datalist" :key="data.filmId" @tap="handleToDetail">
-          <img :src="data.poster" alt="">
-          <h3>{{data.name}}</h3>
-          <p>观众评分<span>{{data.grade}}</span></p>
-          <p>主演：{{data.actors | actorfilter}}</p>
-          <p>类型：{{data.category }}</p>
-        </li>
-      </ul>
-    </Scroll>
+    <!-- <Scroll> -->
+    <ul>
+      <!-- <li class="pullDown">{{pullDownMsg}}</li> -->
+      <li v-for="data in datalist" :key="data.filmId">
+        <div @click="handleToDetail(data.filmId)"><img :src="data.poster" alt=""></div>
+        <h3 @click="handleToDetail(data.filmId)">{{data.name}}</h3>
+        <p>观众评分<span>{{data.grade}}</span></p>
+        <p>主演：{{data.actors | actorfilter}}</p>
+        <p>类型：{{data.category }}</p>
+      </li>
+    </ul>
+    <!-- </Scroll> -->
   </div>
 </template>
 
@@ -31,9 +31,9 @@ export default {
   data() {
     return {
       datalist: [],
-      pullDownMsg: "",
-      isLoading: true,
-      prevCity: -1,
+      pullDownMsg: "",  //下拉时候最顶部出现的正在更新等
+      isLoading: true,  //加载
+      prevCity: -1,   //上一个城市id
     }
   },
   //从城市跳转到正在热映执行该生命周期，让他刷新，从其他地方跳转到正在热映不执行
@@ -83,8 +83,8 @@ export default {
     })
   },
   methods: {
-    handleToDetail() {
-      console.log("触发")
+    handleToDetail(id) {
+      this.$router.push(`/movie/detail/${id}`)
     },
     /* ToScroll() {
       if (pos.y > 30) {
